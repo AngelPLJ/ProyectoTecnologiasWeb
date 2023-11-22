@@ -1,0 +1,66 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.cabecera {
+    background-color: rgb(1, 4, 10);
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+}
+.proyectos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.proyecto {
+    margin: 1em;
+    padding: 1em;
+    flex: 1;
+    width: 250;
+    max-width: 250;
+    background-color: rgba(39, 39, 39, 0.815);
+}
+.proyecto:hover {
+    background-color: rgba(211, 211, 211, 0.815);
+    color: black;
+}
+.footer {
+    text-decoration: none;
+    text-align: center;
+}
+.contact-form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.boton {
+    background-color: paleturquoise; 
+    padding: 2px; 
+    border: 0;
+    margin-top: 1em;
+    margin-left: 8em;
+}
+.boton:hover {
+    background-color: turquoise;
+    color: rgb(49, 49, 49);
+}
+.formu {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    max-width: 300;
+}
+@media (max-width:800px) {
+    .proyectos {
+        flex-direction: column;
+    }
+    .proyecto {
+        margin-bottom: 0em;
+    }
+
+}
