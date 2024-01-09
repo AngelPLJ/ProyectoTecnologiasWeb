@@ -1,74 +1,47 @@
 body {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: #000000;
-    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
 }
-.cabecera {
-    width: 100%;
-    height: 120px;
-    background-color: #a30000;
-    text-align: center;
-    position: fixed;
-    position: inherit;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    margin-bottom: 1rem;
-}
-.contenido {
-    margin: 0 auto;
-}
-.proyectos {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.proyecto {
-    margin: 1em;
-    padding: 1em;
-    flex: 1;
-    width: 250;
-    max-width: 250;
-    background-color: rgba(39, 39, 39, 0.815);
-}
-.proyecto:hover {
-    background-color: rgba(211, 211, 211, 0.815);
-    color: black;
-}
-.footer {
-    text-decoration: none;
-    text-align: center;
-}
-.contact-form {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.boton {
-    background-color: paleturquoise; 
-    padding: 2px; 
-    border: 0;
-    margin-top: 1em;
-    margin-left: 8em;
-}
-.boton:hover {
-    background-color: turquoise;
-    color: rgb(49, 49, 49);
-}
-.formu {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    max-width: 300;
-}
-@media (max-width:800px) {
-    .proyectos {
-        flex-direction: column;
-    }
-    .proyecto {
-        margin-bottom: 0em;
-    }
 
+header {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700; /* Cambia de color al pasar el ratón sobre el enlace */
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
 }
