@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    xhr.open("GET", "obtener_datos.php", true);
+    xhr.open("GET", "../php/ObtenerDatos.php", true);
     xhr.send();
 });
 
