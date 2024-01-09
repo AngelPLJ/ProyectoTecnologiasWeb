@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Enviar Objeto JSON con AJAX</title>
+</head>
+<body>
+
+<form id="miFormulario">
+    <label for="campo1">Campo 1:</label>
+    <input type="text" id="campo1" name="campo1" />
+    
+    <label for="campo2">Campo 2:</label>
+    <input type="text" id="campo2" name="campo2" />
+
+    <button type="button" onclick="enviarFormulario()">Enviar</button>
+</form>
+
+<script>
+function enviarFormulario() {
+    var formData = {
+        'campo1': document.getElementById('campo1').value,
+        'campo2': document.getElementById('campo2').value
+    };
+
+    // Convierte el objeto en una cadena JSON
+    var jsonData = JSON.stringify(formData);
+
+    // Crea un objeto XMLHttpRequest
+    var xhr = new XMLHttpRequest();
+
+    // Configura la solicitud AJAX
+    xhr.open('POST', 'tuscript.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+
+    // Maneja el evento de carga
+    xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            // Éxito en la solicitud
+            console.log(xhr.responseText);
+        } else {
+            // Error en la solicitud
+            console.error('Error en la solicitud: ' + xhr.status);
+        }
+    };
+
+    // Envía la solicitud con los datos JSON
+    xhr.send(jsonData);
+}
+</script>
+
+</body>
+</html>
