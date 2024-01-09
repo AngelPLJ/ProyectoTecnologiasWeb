@@ -1,4 +1,7 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
 // Recibe los datos JSON del cuerpo de la solicitud
 $json_data = file_get_contents('php://input');
 
