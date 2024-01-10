@@ -45,8 +45,8 @@ $dato=$stmt->get_result();
 <nav>
     <a href="../html/index.html">Inicio</a>
     <a href="../php/noticias.php">Noticias</a>
-    <a href="#about">Acerca de</a>
-    <a href="#contacto">Contacto</a>
+    <a href="../html/AcercaDe.html">Acerca de</a>
+    <a href="../html/index.html#contacto">Contacto</a>
 </nav>
 
 <h2>Lista de Usuarios</h2>

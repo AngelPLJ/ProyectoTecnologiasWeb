@@ -43,6 +43,18 @@ $dato=$stmt->get_result();
     </title>
 </head>
 <body>
+        
+<header>
+    <h1>CITECH - IPN</h1>
+</header>
+
+<nav>
+    <a href="../html/index.html">Inicio</a>
+    <a href="../php/noticias.php">Noticias</a>
+    <a href="../html/AcercaDe.html">Acerca de</a>
+    <a href="../html/index.html#contacto">Contacto</a>
+</nav>
+
 <h2>Lista de Usuarios</h2>
 
 <table>
