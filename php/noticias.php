@@ -1,5 +1,5 @@
 <?php
-// Datos de conexión (Descomenta esto y ajusta las credenciales según tus necesidades)
+// Datos de conexión
 
 $host = 'localhost';
 $db   = 'ProyectoWEB';
