@@ -14,17 +14,10 @@ $conexion = new mysqli($host, $user, $pass, $db);
 if ($conexion->connect_error) {
     die("Conexión fallida: " . $conexion->connect_error);
 }
-if(isset($_GET['titulo'])){
-    $titulo=$_GET['titulo'];
 
-}
-else{
-    echo("Error");
-}
 
-$sql= "SELECT * FROM Noticias WHERE tituloNot=?";
+$sql= "SELECT * FROM Noticias";
 $stmt=$conexion->prepare($sql);
-$stmt->bind_param("s",$titulo);
 $stmt->execute();
 $dato=$stmt->get_result();
 // Realiza la consulta solo si la variable $_GET['titulo'] está definida
@@ -35,11 +28,7 @@ $dato=$stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?php 
-            echo htmlspecialchars($titulo); 
-        ?>
-    </title>
+    <title>Noticias</title>
 </head>
 <body>
 <h2>Lista de Usuarios</h2>
