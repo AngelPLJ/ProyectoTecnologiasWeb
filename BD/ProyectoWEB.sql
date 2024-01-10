@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-01-2024 a las 20:55:18
+-- Tiempo de generación: 10-01-2024 a las 21:48:19
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -40,7 +40,11 @@ CREATE TABLE `Noticias` (
 --
 
 INSERT INTO `Noticias` (`id_noticia`, `autor`, `imagen`, `texto`, `tituloNot`) VALUES
-(1, 'CNN', '/opt/lampp/htdocs/ProyectoWEB/imagenes/noticia1.webp', 'El presidente Noboa decretó el conflicto interno armado después de que hombres encapuchados irrumpieron las instalaciones del canal TC Televisión en Guayaquil.', 'Conflicto armado en Ecuador');
+(1, 'CNN', '/opt/lampp/htdocs/ProyectoWEB/imagenes/noticia1.webp', 'El presidente Noboa decretó el conflicto interno armado después de que hombres encapuchados irrumpieron las instalaciones del canal TC Televisión en Guayaquil.', 'Conflicto armado en Ecuador'),
+(2, 'Ricardo Gomez Guzman', '/opt/lampp/htdocs/ProyectoWEB/imagenes/noticia2.png', 'Apenas se enfrentan algunos de los retos que nos ha dejado la pandemia por COVID-19. Sus altos costos humanos y los desafíos impuestos a la educación en un contexto de confinamiento han sido difíciles de superar, pero también han dejado grandes enseñanzas, tal vez la más importante, la relevancia de apostar por una educación que adopte las nuevas tecnologías y las aproveche en favor del estudiantado.', 'La educación Híbrida'),
+(3, 'Adda Avedaño', '/opt/lampp/htdocs/ProyectoWEB/imagenes/noticia3.png', 'La formación integral de las y los jóvenes requiere no sólo de prestar atención a sus necesidades académicas, sino de proveerles de los medios necesarios para un desarrollo físico saludable.', 'Touchdown por las mujeres'),
+(4, 'Nubia Hernandez', '/opt/lampp/htdocs/ProyectoWEB/imagenes/noticia4.png', 'El miércoles 22 de noviembre, el Presidente Andrés Manuel López Obrador anunció en la conferencia matutina la ratificación del doctor Arturo Reyes Sandoval como director general del Instituto Politécnico Nacional (IPN) por otros tres años.', 'Proyecto Vanguardista'),
+(5, 'Andrés Echeverria', '/opt/lampp/htdocs/ProyectoWEB/imagenes/noticia5.png', 'Nuestro momento es ahora. En el Instituto Politécnico Nacional (IPN) vivimos una era de logros y consecución de éxitos.', 'La fiesta del IPN');
 
 -- --------------------------------------------------------
 
@@ -81,7 +85,7 @@ ALTER TABLE `Usuarios`
 -- AUTO_INCREMENT de la tabla `Noticias`
 --
 ALTER TABLE `Noticias`
-  MODIFY `id_noticia` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_noticia` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `Usuarios`
