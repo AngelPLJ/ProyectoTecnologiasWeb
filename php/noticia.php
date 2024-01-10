@@ -19,7 +19,8 @@ if(isset($_GET['titulo'])){
 
 }
 else{
-    echo("Error");
+    header("Location: noticias.php");
+    exit();
 }
 
 $sql= "SELECT * FROM Noticias WHERE tituloNot=?";
