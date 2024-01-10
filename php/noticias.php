@@ -60,7 +60,7 @@ $dato=$stmt->get_result();
         <?php while ($row = $dato->fetch_assoc()): ?>
             <tr>
                 <td><?php echo htmlspecialchars($row['autor']); ?></td>
-                <td><?php echo htmlspecialchars($row['imagen']); ?></td>
+                <td><img src = <?php echo htmlspecialchars($row['imagen']); ?> alt = <?php echo htmlspecialchars($row['imagen']); ?>/></td>
                 <td><?php echo htmlspecialchars($row['texto']); ?></td>
                 <td><?php echo htmlspecialchars($row['tituloNot']); ?></td>
             </tr>
@@ -68,7 +68,6 @@ $dato=$stmt->get_result();
         </tr>
     </tbody>
 </table>
-
 </body>
 </html>
 
