@@ -21,7 +21,7 @@ function llenarParrafos(data) {
     for (var key in data) {
         if (data.hasOwnProperty(key)) {
             var paragraph = document.createElement("p");
-            paragraph.textContent = key + ": " + data[key];
+            paragraph.textContent = key + ': ' + data[key]['autor'];
             contentContainer.appendChild(paragraph);
         }
     }

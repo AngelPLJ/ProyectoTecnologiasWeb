@@ -138,6 +138,9 @@ $dato=$stmt->get_result();
         </tr>
     </tbody>
 </table>
+<footer>
+    <p>Soporte <i class='bx bxs-wrench'></i>: luisambro_150@alumno.ipn.mx <br> Derechos de autor © 2023 - CIDETECH  </p>
+</footer>
 </body>
 </html>
 

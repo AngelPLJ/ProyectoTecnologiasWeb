@@ -27,7 +27,8 @@ $sql= "SELECT * FROM Noticias WHERE tituloNot=?";
 $stmt=$conexion->prepare($sql);
 $stmt->bind_param("s",$titulo);
 $stmt->execute();
-$dato=$stmt->get_result();
+$datos=$stmt->get_result();
+$dato = $datos->fetch_assoc();
 // Realiza la consulta solo si la variable $_GET['titulo'] está definida
 ?>
 
@@ -36,6 +37,12 @@ $dato=$stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../logo/CIDETECH.png">
+    <link rel = "stylesheet" href="../css/indexCss.css"/>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title>
         <?php 
             echo htmlspecialchars($titulo); 
@@ -55,7 +62,12 @@ $dato=$stmt->get_result();
     <a href="../html/index.html#contacto">Contacto</a>
 </nav>
 
-<h2>Lista de Usuarios</h2>
+<h1><?php echo htmlspecialchars($dato['tituloNot']); ?></h1>
+<br/>
+<img src=<?php echo htmlspecialchars($dato['imagen']); ?> alt=<?php echo htmlspecialchars($dato['imagen']); ?>/>
+<br/>
+<h2><?php echo htmlspecialchars($dato['autor']); ?></h2>
+<p><?php echo htmlspecialchars($dato['texto']); ?></p>
 
 <table>
     <thead>
@@ -63,7 +75,7 @@ $dato=$stmt->get_result();
     </thead>
     <tbody>
         <tr>
-        <?php while ($row = $dato->fetch_assoc()): ?>
+        <?php while ($row = $datos->fetch_assoc()): ?>
             <tr>
                 <td><?php echo htmlspecialchars($row['autor']); ?></td>
                 <td><?php echo htmlspecialchars($row['imagen']); ?></td>
@@ -74,6 +86,10 @@ $dato=$stmt->get_result();
         </tr>
     </tbody>
 </table>
+
+<footer>
+    <p>Soporte <i class='bx bxs-wrench'></i>: luisambro_150@alumno.ipn.mx <br> Derechos de autor © 2023 - CIDETECH  </p>
+</footer>
 
 </body>
 </html>
