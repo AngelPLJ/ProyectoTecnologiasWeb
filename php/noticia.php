@@ -41,7 +41,7 @@ $dato = $datos->fetch_assoc();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../logo/CIDETECH.png">
-    <link rel = "stylesheet" href="../css/indexCss.css"/>
+    <link rel = "stylesheet" href="../css/noticia.css"/>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title>
         <?php 
@@ -62,30 +62,14 @@ $dato = $datos->fetch_assoc();
     <a href="../html/index.html#contacto">Contacto</a>
 </nav>
 
-<h1><?php echo htmlspecialchars($dato['tituloNot']); ?></h1>
-<br/>
-<img src=<?php echo htmlspecialchars($dato['imagen']); ?> alt=<?php echo htmlspecialchars($dato['imagen']); ?>/>
-<br/>
-<h2><?php echo htmlspecialchars($dato['autor']); ?></h2>
-<p><?php echo htmlspecialchars($dato['texto']); ?></p>
-
-<table>
-    <thead>
-        <!-- ... -->
-    </thead>
-    <tbody>
-        <tr>
-        <?php while ($row = $datos->fetch_assoc()): ?>
-            <tr>
-                <td><?php echo htmlspecialchars($row['autor']); ?></td>
-                <td><?php echo htmlspecialchars($row['imagen']); ?></td>
-                <td><?php echo htmlspecialchars($row['texto']); ?></td>
-                <td><?php echo htmlspecialchars($row['tituloNot']); ?></td>
-            </tr>
-        <?php endwhile; ?>
-        </tr>
-    </tbody>
-</table>
+<div>
+    <h1><?php echo htmlspecialchars($dato['tituloNot']); ?></h1>
+    <br/>
+    <img src=<?php echo htmlspecialchars($dato['imagen']); ?> alt=<?php echo htmlspecialchars($dato['imagen']); ?>/>
+    <br/>
+    <h2><?php echo htmlspecialchars($dato['autor']); ?></h2>
+    <p><?php echo htmlspecialchars($dato['texto']); ?></p>
+</div>
 
 <footer>
     <p>Soporte <i class='bx bxs-wrench'></i>: luisambro_150@alumno.ipn.mx <br> Derechos de autor © 2023 - CIDETECH  </p>
