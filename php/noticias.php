@@ -35,6 +35,76 @@ $dato=$stmt->get_result();
     <link rel = "stylesheet" href="../css/indexCss.css"/>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title>Noticias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #c72f2f;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        h2 {
+            margin-top: 20px;
+            text-align: center;
+            color: #c72f2f;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        table th,
+        table td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+
 </head>
 <body>
     
@@ -49,7 +119,7 @@ $dato=$stmt->get_result();
     <a href="../html/index.html#contacto">Contacto</a>
 </nav>
 
-<h2>Lista de Usuarios</h2>
+<h2>Noticias del día</h2>
 
 <table>
     <thead>
