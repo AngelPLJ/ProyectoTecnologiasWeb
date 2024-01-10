@@ -55,7 +55,7 @@ $dato=$stmt->get_result();
     <a href="../html/index.html#contacto">Contacto</a>
 </nav>
 
-<h2>Lista de Usuarios</h2>
+<h2>Noticias del día</h2>
 
 <table>
     <thead>
