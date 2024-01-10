@@ -32,6 +32,7 @@ $dato=$stmt->get_result();
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<<<<<<< HEAD
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($titulo); ?></title>
@@ -41,6 +42,37 @@ $dato=$stmt->get_result();
 </head>
 <body>
 
+=======
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../logo/CIDETECH.png">
+    <link rel = "stylesheet" href="../css/indexCss.css"/>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>
+        <?php 
+            if($titulo){
+                echo htmlspecialchars($titulo); 
+            } else {
+                echo htmlspecialchars("Noticias");
+            }
+        ?>
+    </title>
+</head>
+<body>
+
+<header>
+    <h1>CITECH - IPN</h1>
+</header>
+
+<nav>
+    <a href="../html/index.html">Inicio</a>
+    <a href="#noticias">Noticias</a>
+    <a href="#about">Acerca de</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+>>>>>>> ProyectoTecnologiasWeb/main
 <h2>Lista de Usuarios</h2>
 
 <table>

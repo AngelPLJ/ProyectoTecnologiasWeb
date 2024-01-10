@@ -1,31 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../logo/CIDETECH.png">
     <link rel = "stylesheet" href="../css/indexCss.css"/>
-    <title>Landing Page con MenÃº</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>CITECH - IPN</title>
+    <script type="module" src="../js/index.js"></script>
 </head>
 <body>
 
 <header>
-    <h1>Nombre de tu Landing Page</h1>
+    <h1>CITECH - IPN</h1>
 </header>
 
 <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Acerca de</a>
-    <a href="#">Servicios</a>
-    <a href="#">Contacto</a>
+    <a href="../html/index.html">Inicio</a>
+    <a href="../php/noticias.php">Noticias</a>
+    <a href="#about">Acerca de</a>
+    <a href="#contacto">Contacto</a>
 </nav>
 
-<section>
-    <h2>Contenido de la Landing Page</h2>
-    <p>Bienvenido a nuestra landing page. AquÃ­ puedes agregar informaciÃ³n sobre tus productos, servicios, etc.</p>
+<section class="slideshow" id="inicio">
+    <div class="fade">
+        <div class="numbertext">1/3</div>
+        <a href="#"><img src="../images/ejemplo.jpg" style="width: 100%;">
+        </a>
+        <div class="text">Caption text 1</div>
+    </div>
+    <div class="fade">
+        <div class="numbertext">2/3</div>
+        <a href="#"><img src="../images/ejemplo2.jpg" style="width: 100%;">
+        </a>
+        <div class="text">Caption text 2</div>
+    </div>
+    <div class="fade">
+        <div class="numbertext">3/3</div>
+        <a href="#"><img src="../images/ejemplo3.jpg" style="width: 100%;">
+        </a>
+        <div class="text">Caption text 3</div>
+    </div>
+</section>
+<br>
+<div style="text-align:center;">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+</div>
+<section id="noticias">
+    <h2>Contenido 2</h2>
+    <p>Bienvenido a nuestra página de noticias. Aquí puedes agregar información sobre tus productos, servicios, etc.</p>
+</section>
+<section class="contact" id="contacto">
+    <h2>Contactanos</h2>
+    <p>Si quieres publicar una noticia con nosotros o dejarnos un comentario, llena el formulario.</p>
+</section>
+<section class="form-section" id="form-section">
+    <div class="contact-form">
+        <form name="frm" method="post" action="">
+            <input type="" name="uname" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Email" required>
+
+            <input type="text" name="Msubject" placeholder="Acerca de">
+            <textarea name="tmessage" id="" cols="40" rows="18" placeholder="Tu mensaje" required></textarea>
+        <input type="submit" name="submit" value="Enviar" class="send">	
+        </form>
+    </div>
 </section>
 
 <footer>
-    <p>Derechos de autor Â© 2023 - Nombre de tu Empresa</p>
+    <p>Soporte <i class='bx bxs-wrench'></i>: luisambro_150@alumno.ipn.mx <br> Derechos de autor © 2023 - CIDETECH  </p>
 </footer>
 
 </body>
