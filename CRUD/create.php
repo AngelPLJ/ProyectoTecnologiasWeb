@@ -134,13 +134,13 @@ input[type="submit"]:hover {
     <label for="autor">Autor:</label>
     <input type="text" id="autor" name="autor" required>
     <br>
-    <label for="imagen">URL de la imagen:</label>
+    <label for="imagen">Dirección de la imagen:</label>
     <input type="text" id="imagen" name="imagen" required>
     <br>
-    <label for="texto">Texto:</label>
+    <label for="texto">Resumen de Noticia:</label>
     <textarea id="texto" name="texto" rows="10" required></textarea>
     <br>
-    <label for="tituloNot">Título:</label>
+    <label for="tituloNot">Título de la Noticia:</label>
     <input type="text" id="tituloNot" name="tituloNot" required>
 
     <input type="submit" value="Crear Noticia">
