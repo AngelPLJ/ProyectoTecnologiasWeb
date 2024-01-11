@@ -15,11 +15,11 @@ $result = $conn->query($sql);
 	<table class="tbl-qa">	
 		<thead>
 			 <tr>
-				<th class="table-header" width="20%"> ID </th>
 				<th class="table-header" width="20%"> Autor </th>
-				<th class="table-header" width="20%">Imagen </th>
-				<th class="table-header" width="20%">Titulo</th>
+				<th class="table-header" width="20%"> Imagen </th>
+				<th class="table-header" width="20%">Título </th>
 				<th class="table-header" width="20%">Texto</th>
+				<th class="table-header" width="20%">Acción</th>
 				<th class="table-header" width="20%" colspan="2">Action</th>
 			  </tr>
 		</thead>
