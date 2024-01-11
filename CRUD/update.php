@@ -6,7 +6,7 @@
 		$imagen = $_POST['imagen'];
 		$tituloNot =$_POST['tituloNot'];
 		$texto =$_POST['texto'];
-		$sql->bind_param("ssssi",$uname, $email,$Msubject,$tmessage,$_GET["id"]);	
+		$sql->bind_param("ssssi",$autor, $imagen,$tituloNot,$texto,$_GET["id"]);	
 		if($sql->execute()) {
 			$success_message = "Edited Successfully";
 		} else {
