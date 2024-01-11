@@ -165,3 +165,10 @@ footer {
     background-color: #c72f2f;
     color: #fff;
 }
+.noticia {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}

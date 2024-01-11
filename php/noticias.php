@@ -122,20 +122,18 @@ $dato=$stmt->get_result();
 <h2>Noticias del día</h2>
 
 <table>
-    <thead>
-        <!-- ... -->
-    </thead>
     <tbody>
-        <tr>
         <?php while ($row = $dato->fetch_assoc()): ?>
-            <tr>
-                <td><?php echo htmlspecialchars($row['autor']); ?></td>
-                <td><img src = <?php echo htmlspecialchars($row['imagen']); ?> alt = <?php echo htmlspecialchars($row['imagen']); ?>/></td>
-                <td><?php echo htmlspecialchars($row['texto']); ?></td>
-                <td><?php echo htmlspecialchars($row['tituloNot']); ?></td>
-            </tr>
-        <?php endwhile; ?>
+        <tr>
+            <td>
+                <div class="noticia">
+                    <?php echo htmlspecialchars($row['autor']); ?>
+                    <a href="../php/noticia.php?titulo=<?php echo htmlspecialchars($row['tituloNot'])?>"><img src = <?php echo htmlspecialchars($row['imagen']); ?> alt = <?php echo htmlspecialchars($row['imagen']); ?>/></a>   
+                    <?php echo htmlspecialchars($row['tituloNot']); ?>
+                </div>
+            </td>
         </tr>
+        <?php endwhile; ?>
     </tbody>
 </table>
 <footer>
