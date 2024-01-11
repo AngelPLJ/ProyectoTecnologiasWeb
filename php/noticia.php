@@ -62,13 +62,13 @@ $dato = $datos->fetch_assoc();
     <a href="../html/index.html#contacto">Contacto</a>
 </nav>
 
-<div>
+<div style="text-align:center;">
     <h1><?php echo htmlspecialchars($dato['tituloNot']); ?></h1>
     <br/>
     <img src=<?php echo htmlspecialchars($dato['imagen']); ?> alt=<?php echo htmlspecialchars($dato['imagen']); ?>/>
     <br/>
-    <h2><?php echo htmlspecialchars($dato['autor']); ?></h2>
-    <p><?php echo htmlspecialchars($dato['texto']); ?></p>
+    <h2>Presentado por: <?php echo htmlspecialchars($dato['autor']); ?></h2>
+    <p style="text-align: justify;"><?php echo htmlspecialchars($dato['texto']); ?></p>
 </div>
 
 <footer>
