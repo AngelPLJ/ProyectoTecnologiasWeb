@@ -71,7 +71,7 @@ $dato = $datos->fetch_assoc();
 </div>
 
 <footer>
-    <p>Soporte <i class='bx bxs-wrench'></i>: luisambro_150@alumno.ipn.mx <br> Derechos de autor © 2023 - CIDETECH  </p>
+    <p>Soporte <i class='bx bxs-wrench'></i>: luisambro_150@alumno.ipn.mx <br> Derechos de autor © 2023 - CITECH  </p>
 </footer>
 
 </body>
