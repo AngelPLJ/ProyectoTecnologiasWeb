@@ -126,7 +126,7 @@ $dato=$stmt->get_result();
         <?php while ($row = $dato->fetch_assoc()): ?>
         <tr>
             <td>
-                <div class="noticia" id = "noticia">
+                <div class="noticia" data-redirect="../php/noticia.php?titulo="<?php echo htmlspecialchars($row['titulo'])?>>
                     <p><?php echo htmlspecialchars($row['autor']); ?></p>
                     <img src = <?php echo htmlspecialchars($row['imagen']); ?> alt = <?php echo htmlspecialchars($row['imagen']); ?>/></a>   
                     <p><?php echo htmlspecialchars($row['tituloNot']); ?></p>
