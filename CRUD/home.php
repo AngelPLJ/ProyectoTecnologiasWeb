@@ -20,7 +20,6 @@ $result = $conn->query($sql);
 				<th class="table-header" width="20%">Título </th>
 				<th class="table-header" width="20%">Texto</th>
 				<th class="table-header" width="20%">Acción</th>
-				<th class="table-header" width="20%" colspan="2">Action</th>
 			  </tr>
 		</thead>
 		<tbody>		
