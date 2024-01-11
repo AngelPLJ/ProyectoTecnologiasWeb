@@ -7,7 +7,7 @@ $result = $conn->query($sql);
 ?>
 <html>
 <head>
-	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="../css/style.css" rel="stylesheet" type="text/css" />
 	<title>Noticias</title>
 </head>
 <body>
@@ -34,7 +34,7 @@ $result = $conn->query($sql);
 				<td class="table-row"><?php echo $row["tituloNot"]; ?></td>
 				<td class="table-row"><?php echo $row["texto"]; ?></td>
 				<!-- action -->
-				<td class="table-row" colspan="2"><a href="update.php?id=<?php echo $row["id"]; ?>" class="link"><img title="Edit" src="icon/edit.png"/></a> <a href="delete.php?id=<?php echo $row["id"]; ?>" class="link"><img name="delete" id="delete" title="Delete" onClick="return confirm('Are you sure you want to delete?')" src="icon/delete.png"/></a></td>
+				<td class="table-row" colspan="2"><a href="update.php?id=<?php echo $row["id"]; ?>" class="link"><img title="Edit" src="../icon/edit.png"/></a> <a href="delete.php?id=<?php echo $row["id"]; ?>" class="link"><img name="delete" id="delete" title="Delete" onClick="return confirm('Are you sure you want to delete?')" src="../icon/delete.png"/></a></td>
 			</tr>
 			<?php
 					}
