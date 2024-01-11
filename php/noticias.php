@@ -104,7 +104,7 @@ $dato=$stmt->get_result();
             height: auto;
         }
     </style>
-
+    <script type="module" src="../js/noticias.js"></script>
 </head>
 <body>
     
@@ -126,10 +126,10 @@ $dato=$stmt->get_result();
         <?php while ($row = $dato->fetch_assoc()): ?>
         <tr>
             <td>
-                <div class="noticia">
-                    <?php echo htmlspecialchars($row['autor']); ?>
-                    <a href="../php/noticia.php?titulo=<?php echo htmlspecialchars($row['tituloNot'])?>"><img src = <?php echo htmlspecialchars($row['imagen']); ?> alt = <?php echo htmlspecialchars($row['imagen']); ?>/></a>   
-                    <?php echo htmlspecialchars($row['tituloNot']); ?>
+                <div class="noticia" id = "noticia">
+                    <p><?php echo htmlspecialchars($row['autor']); ?></p>
+                    <img src = <?php echo htmlspecialchars($row['imagen']); ?> alt = <?php echo htmlspecialchars($row['imagen']); ?>/></a>   
+                    <p><?php echo htmlspecialchars($row['tituloNot']); ?></p>
                 </div>
             </td>
         </tr>
