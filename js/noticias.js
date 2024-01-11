@@ -1,8 +1,9 @@
 var miDivs = document.querySelectorAll('.noticia');
 
-miDivs
-// Agregar un evento de clic al div
-miDiv.addEventListener("click", function() {
-    // Redirigir a la URL especificada
-    window.location.href = "../php/noticia.php?titulo=" + miDiv.title;
-});
+miDivs.forEach(function(div){
+    div.addEventListener('click', function(){
+        var urla = this.getAttribute('data-redirect');
+        console.log(urla);
+        window.location.href = urla; 
+    })
+})
