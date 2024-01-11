@@ -126,9 +126,9 @@ $dato=$stmt->get_result();
         <?php while ($row = $dato->fetch_assoc()): ?>
         <tr>
             <td>
-                <div class="noticia" data-redirect="../php/noticia.php?titulo=<?php echo htmlspecialchars($row['tituloNot'])?>">
+                <div class="noticia" data-redirect="../php/noticia.php?id=<?php echo htmlspecialchars($row['id'])?>">
                     <p><?php echo htmlspecialchars($row['autor']); ?></p>
-                    <img src = <?php echo htmlspecialchars($row['imagen']); ?> alt = <?php echo htmlspecialchars($row['imagen']); ?>/></a>   
+                    <img style="width: 60em;" src = <?php echo htmlspecialchars($row['imagen']); ?> alt = <?php echo htmlspecialchars($row['imagen']); ?>/></a>   
                     <p><?php echo htmlspecialchars($row['tituloNot']); ?></p>
                 </div>
             </td>

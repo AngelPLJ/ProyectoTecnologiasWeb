@@ -25,13 +25,13 @@ function llenarImagenes(data) {
     if (data.hasOwnProperty(key)) {
           switch(cont) {
             case 1: {
-              imagen1.innerHTML = "<a href='../php/noticia.php?titulo=" + data[key]['tituloNot'] + "'><img src='" + data[key]['imagen'] + "' style='width: 100%;'></a><div class='text'>" + data[key]['tituloNot'] + "</div>";
+              imagen1.innerHTML = "<a href='../php/noticia.php?id=" + data[key]['id'] + "'><img src='" + data[key]['imagen'] + "' style='width: 100%;'></a><div class='text'>" + data[key]['tituloNot'] + "</div>";
             } 
             case 2: {
-              imagen2.innerHTML = "<a href='../php/noticia.php?titulo=" + data[key]['tituloNot'] + "'><img src='" + data[key]['imagen'] + "' style='width: 100%;'></a><div class='text'>" + data[key]['tituloNot'] + "</div>";
+              imagen2.innerHTML = "<a href='../php/noticia.php?id=" + data[key]['id'] + "'><img src='" + data[key]['imagen'] + "' style='width: 100%;'></a><div class='text'>" + data[key]['tituloNot'] + "</div>";
             } 
             case 3: {
-              imagen3.innerHTML = "<a href='../php/noticia.php?titulo=" + data[key]['tituloNot'] + "'><img src='" + data[key]['imagen'] + "' style='width: 100%;'></a><div class='text'>" + data[key]['tituloNot'] + "</div>";
+              imagen3.innerHTML = "<a href='../php/noticia.php?id=" + data[key]['id'] + "'><img src='" + data[key]['imagen'] + "' style='width: 100%;'></a><div class='text'>" + data[key]['tituloNot'] + "</div>";
             } 
           }
           cont = cont + 1;

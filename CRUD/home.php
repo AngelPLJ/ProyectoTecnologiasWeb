@@ -7,14 +7,22 @@ $result = $conn->query($sql);
 ?>
 <html>
 <head>
-	<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../logo/CIDETECH.png">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../logo/CIDETECH.png">
 	<link href="../css/style.css" rel="stylesheet" type="text/css" />
 	<title>Noticias</title>
 </head>
 <body>
+	<header>
+		<h1>CITECH - IPN</h1>
+	</header>
+
 	<div class="button_link"><a href="create.php">Añadir una nueva noticia</a></div>
 	<table class="tbl-qa">	
 		<thead>
@@ -33,7 +41,7 @@ $result = $conn->query($sql);
 			?>
 			<tr class="table-row" id="row-<?php echo $row["id"]; ?>"> 
 				<td class="table-row"><?php echo $row["autor"]; ?></td>
-				<td class="table-row"><?php echo $row["imagen"]; ?></td>
+				<td class="table-row"><img style="width: 20em;" src = <?php echo htmlspecialchars($row["imagen"]); ?> alt = <?php echo htmlspecialchars($row["imagen"]); ?>/></td>
 				<td class="table-row"><?php echo $row["tituloNot"]; ?></td>
 				<td class="table-row"><?php echo $row["texto"]; ?></td>
 				<!-- action -->

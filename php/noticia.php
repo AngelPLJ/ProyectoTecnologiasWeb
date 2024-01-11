@@ -14,18 +14,17 @@ $conexion = new mysqli($host, $user, $pass, $db);
 if ($conexion->connect_error) {
     die("Conexión fallida: " . $conexion->connect_error);
 }
-if(isset($_GET['titulo'])){
-    $titulo=$_GET['titulo'];
-
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
 }
 else{
     header("Location: noticias.php");
     exit();
 }
 
-$sql= "SELECT * FROM Noticias WHERE tituloNot=?";
+$sql= "SELECT * FROM Noticias WHERE id=?";
 $stmt=$conexion->prepare($sql);
-$stmt->bind_param("s",$titulo);
+$stmt->bind_param("s",$id);
 $stmt->execute();
 $datos=$stmt->get_result();
 $dato = $datos->fetch_assoc();
@@ -45,7 +44,7 @@ $dato = $datos->fetch_assoc();
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title>
         <?php 
-            echo htmlspecialchars($titulo); 
+            echo htmlspecialchars($dato['tituloNot']); 
         ?>
     </title>
 </head>
@@ -65,7 +64,7 @@ $dato = $datos->fetch_assoc();
 <div style="text-align:center;">
     <h1><?php echo htmlspecialchars($dato['tituloNot']); ?></h1>
     <br/>
-    <img src=<?php echo htmlspecialchars($dato['imagen']); ?> alt=<?php echo htmlspecialchars($dato['imagen']); ?>/>
+    <img style="width: 100%;" src=<?php echo htmlspecialchars($dato['imagen']); ?> alt=<?php echo htmlspecialchars($dato['imagen']); ?>/>
     <br/>
     <h2>Presentado por: <?php echo htmlspecialchars($dato['autor']); ?></h2>
     <p style="text-align: justify;"><?php echo htmlspecialchars($dato['texto']); ?></p>
