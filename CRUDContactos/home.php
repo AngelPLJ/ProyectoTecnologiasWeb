@@ -26,11 +26,10 @@ $result = $conn->query($sql);
 	<table class="tbl-qa">	
 		<thead>
 			 <tr>
-				<th class="table-header" width="20%"> Nombre </th>
-				<th class="table-header" width="20%"> Email </th>
-				<th class="table-header" width="20%"> Acerca de </th>
-				<th class="table-header" width="20%"> Mensaje </th>
-				<th class="table-header" width="20%"> Accion </th>
+				<th class="table-header" width="25%"> Nombre </th>
+				<th class="table-header" width="25%"> Email </th>
+				<th class="table-header" width="25%"> Acerca de </th>
+				<th class="table-header" width="25%"> Mensaje </th>
 			  </tr>
 		</thead>
 		<tbody>		
@@ -39,10 +38,10 @@ $result = $conn->query($sql);
 					while($row = $result->fetch_assoc()) {
 			?>
 			<tr class="table-row" id="row-<?php echo $row["id"]; ?>"> 
-				<td class="table-row"><?php echo $row["nombre"]; ?></td>
-				<td class="table-row"><?php echo $row["email"]; ?></td>
-				<td class="table-row"><?php echo $row["acerca"]; ?></td>
-				<td class="table-row"><?php echo $row["comentario"]; ?></td>
+				<td class="table-row"><?php echo $row["Nombre"]; ?></td>
+				<td class="table-row"><?php echo $row["Email"]; ?></td>
+				<td class="table-row"><?php echo $row["Acerca"]; ?></td>
+				<td class="table-row"><?php echo $row["Comentario"]; ?></td>
 				<!-- action -->
 			</tr>
 			<?php
