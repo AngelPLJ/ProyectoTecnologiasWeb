@@ -54,6 +54,60 @@ $comentarios=$stmt->get_result();
         ?>
     </title>
     <script src="../js/noticia.js" defer></script>
+    <style>
+    /* Estilos para el contenedor de comentarios */
+    .comentarios-container {
+        max-width: 800px; /* Ancho máximo del contenedor de comentarios */
+        margin: 0 auto; /* Centrar horizontalmente */
+        padding: 20px; /* Espaciado interno */
+    }
+
+    /* Estilos para los comentarios */
+    p {
+        margin-bottom: 10px;
+    }
+
+    strong {
+        color: #3366cc; /* Color del nombre en negrita */
+    }
+
+    hr {
+        border: 1px solid #ddd; /* Línea divisoria */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Estilos para el formulario de agregar comentario */
+    form {
+        margin-top: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #4caf50; /* Color de fondo del botón */
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049; /* Cambia el color de fondo en el hover */
+    }
+</style>
 </head>
 <body>
         
@@ -76,9 +130,6 @@ $comentarios=$stmt->get_result();
     <h2>Presentado por: <?php echo htmlspecialchars($dato['autor']); ?></h2>
     <p style="text-align: justify;"><?php echo htmlspecialchars($dato['texto']); ?></p>
 </div>
-
-<h2>Comentarios:</h2>
-
     <?php while ($row = $comentarios->fetch_assoc()):?>
     <p><strong><?php echo htmlspecialchars($row['nombre'])?></strong> <?php echo htmlspecialchars($row['fechaCom'])?>:<br><?php echo htmlspecialchars($row['comentario'])?></p>
     <?php endwhile; ?>
