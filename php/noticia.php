@@ -28,7 +28,13 @@ $stmt->bind_param("s",$id);
 $stmt->execute();
 $datos=$stmt->get_result();
 $dato = $datos->fetch_assoc();
-// Realiza la consulta solo si la variable $_GET['titulo'] está definida
+
+$sql = "SELECT * FROM usuarios WHERE Noticia=? ORDER BY fechaCom DESC";
+$stmt=$conexion->prepare($sql);
+$stmt->bind_param("s",$id);
+$stmt->execute();
+$comentarios=$stmt->get_result();
+
 ?>
 
 <!DOCTYPE html>
@@ -47,6 +53,7 @@ $dato = $datos->fetch_assoc();
             echo htmlspecialchars($dato['tituloNot']); 
         ?>
     </title>
+    <script src="../js/noticia.js" defer></script>
 </head>
 <body>
         
@@ -69,6 +76,24 @@ $dato = $datos->fetch_assoc();
     <h2>Presentado por: <?php echo htmlspecialchars($dato['autor']); ?></h2>
     <p style="text-align: justify;"><?php echo htmlspecialchars($dato['texto']); ?></p>
 </div>
+
+<h2>Comentarios:</h2>
+
+    <?php while ($row = $comentarios->fetch_assoc()):?>
+    <p><strong><?php echo htmlspecialchars($row['nombre'])?></strong> <?php echo htmlspecialchars($row['fechaCom'])?>:<br><?php echo htmlspecialchars($row['comentario'])?></p>
+    <?php endwhile; ?>
+    <hr>
+    <h2>Agregar un Comentario:</h2>
+    <form onsubmit="noticia()">
+        <label style="display: none;" id="id" data-redirect="<?php echo htmlspecialchars($id)?>"></label>
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" type="text" name="nombre" required><br>
+
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario" required></textarea><br>
+
+        <input type="submit" value="Agregar Comentario">
+    </form>
 
 <footer>
     <p>Soporte <i class='bx bxs-wrench'></i>: luisambro_150@alumno.ipn.mx <br> Derechos de autor © 2023 - CITECH  </p>

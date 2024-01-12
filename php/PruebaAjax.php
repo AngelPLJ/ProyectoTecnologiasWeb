@@ -2,6 +2,23 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
+// Datos de conexión
+
+$host = 'localhost';
+$db   = 'ProyectoWEB';
+$user = 'root';
+$pass = '';
+$charset = 'utf-8';
+
+// Crear conexión
+$conexion = new mysqli($host, $user, $pass, $db);
+
+// Verificar la conexión
+if ($conexion->connect_error) {
+    die("Conexión fallida: " . $conexion->connect_error);
+}
+
+
 // Recibe los datos JSON del cuerpo de la solicitud
 $json_data = file_get_contents('php://input');
 
@@ -9,11 +26,17 @@ $json_data = file_get_contents('php://input');
 $data = json_decode($json_data, true);
 
 // Accede a los valores individuales
-$campo1 = $data['campo1'];
-$campo2 = $data['campo2'];
+$nombre = $data['nombre'];
+$comentario = $data['comentario'];
+$id = $data['id'];
 
-// Haz lo que necesites con los datos, por ejemplo, guardar en la base de datos, etc.
+$sql= "INSERT INTO Usuarios (nombre, comentario, Noticia) VALUES ('$nombre', '$comentario', $id)";
 
-// Responde con algún mensaje, por ejemplo, un mensaje de éxito
-echo json_encode(['status' => 'success', 'message' => 'Datos recibidos con éxito']);
+if ($conexion->query($sql) === TRUE) {
+    echo json_encode(['status' => 'success', 'message' => 'Datos recibidos con éxito']);
+} else {
+    echo json_encode(['status' => 'failed', 'message' => 'Error']);
+}
+
+$conexion->close();
 ?>
