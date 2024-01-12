@@ -1,9 +1,9 @@
-function noticia() {
-    var id = document.getElementById('id').getAttribute('data-redirect');
+function contacto() {
     var formData = {
         'nombre': document.getElementById('nombre').value,
-        'comentario': document.getElementById('comentario').value,
-        'id': document.getElementById('id').getAttribute('data-redirect')
+        'email': document.getElementById('email').value,
+        'acerca': document.getElementById('acerca').value,
+        'comentario': document.getElementById('comentario').value
     };
 
     // Convierte el objeto en una cadena JSON
@@ -13,7 +13,7 @@ function noticia() {
     var xhr = new XMLHttpRequest();
 
     // Configura la solicitud AJAX
-    xhr.open('POST', '../php/PruebaAjax.php', true);
+    xhr.open('POST', '../php/contacto.php', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
 
     // Maneja el evento de carga
@@ -21,7 +21,6 @@ function noticia() {
         if (xhr.status >= 200 && xhr.status < 300) {
             // Éxito en la solicitud
             console.log(xhr.responseText);
-            xhr.open('GET', '../php/noticia.php?id=' + id, true);
         } else {
             // Error en la solicitud
             console.error('Error en la solicitud: ' + xhr.status);
@@ -30,5 +29,4 @@ function noticia() {
 
     // Envía la solicitud con los datos JSON
     xhr.send(jsonData);
-
 }
