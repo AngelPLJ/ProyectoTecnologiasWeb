@@ -9,7 +9,6 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title>CITECH - IPN</title>
     <script type="module" src="../js/index.js"></script>
-    <script src="../js/contacto.js" defer></script>
 </head>
 <body>
 
@@ -52,12 +51,12 @@
 </section>
 <section class="form-section" id="form-section">
     <div class="contact-form">
-        <form style = "display: flex; flex-direction: column; align-items: center;"name="frm" onsubmit="contactos()">
-            <input id="nobre" type="" name="uname" placeholder="Tu Nombre" required>
+        <form style = "display: flex; flex-direction: column; align-items: center;"name="frm" method="post" action="../php/contacto.php">
+            <input id="nobre" type="" name="nombre" placeholder="Tu Nombre" required>
             <input id="email" type="email" name="email" placeholder="Tu Email" required>
 
-            <input id="acerca" type="text" name="Msubject" placeholder="Acerca de">
-            <textarea id="comentario" name="tmessage" id="" cols="40" rows="18" placeholder="Tu mensaje" required></textarea>
+            <input id="acerca" type="text" name="acerca" placeholder="Acerca de">
+            <textarea id="comentario" name="comentario" id="" cols="40" rows="18" placeholder="Tu mensaje" required></textarea>
             <input style="width: fit-content;" type="submit" name="submit" value="Enviar" class="send">	
         </form>
     </div>
