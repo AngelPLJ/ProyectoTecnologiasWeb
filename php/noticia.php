@@ -130,6 +130,7 @@ $comentarios=$stmt->get_result();
     <h2>Presentado por: <?php echo htmlspecialchars($dato['autor']); ?></h2>
     <p style="text-align: justify;"><?php echo htmlspecialchars($dato['texto']); ?></p>
 </div>
+    <h2>Comentarios:</h2>
     <?php while ($row = $comentarios->fetch_assoc()):?>
     <p><strong><?php echo htmlspecialchars($row['nombre'])?></strong> <?php echo htmlspecialchars($row['fechaCom'])?>:<br><?php echo htmlspecialchars($row['comentario'])?></p>
     <?php endwhile; ?>
